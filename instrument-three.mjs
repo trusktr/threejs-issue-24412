@@ -4,7 +4,7 @@ import {promises as fs} from 'fs'
 import path from 'path'
 import * as walker from 'at-at'
 
-// const functionHeader = /(function|\n)[ \t]*\w*\s*\(.*?\)\s*{/g
+// More details on this regex: https://regexr.com/6qth2
 const functionHeader =
 	/((function|\n)[ \t]*((?!(constructor))\w)*\s*\(.*?\)\s*{)|(\n[ \t]*(constructor)\s*?\(.*?\)\s*?{((?!constructor)\S|\s)*?(\bsuper)\(.*\);?)|(\n[ \t]*(constructor)\s*\(.*?\)\s*{(\S|\s)*?)/g
 
