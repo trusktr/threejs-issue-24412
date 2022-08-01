@@ -31,7 +31,8 @@ see by diffing `result-desktop.json` with `result-android.json`.
 
 # Current diff
 
-Here is the current diff between outputs:
+The following is the current diff between outputs. It was generated with `diff -u result-desktop.json result-android.json`. I'll keep this updated as I improve
+the instrumentation.
 
 ```patch
 --- result-desktop.json 2022-07-31 18:08:35.931448506 -0700
@@ -65,8 +66,6 @@ Here is the current diff between outputs:
         "class method:SingleUniform#function setValueM4(gl, v) {",
         "class method:Window#function arraysEqual(a, b) {",
 ```
-
-I'll keep this updated as I improve the instrumentation.
 
 # Further improvement
 
