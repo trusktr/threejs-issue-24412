@@ -29,6 +29,45 @@ and `result-android.json`, respectively.
 The desktop app executes 7 more locations than the mobile app does, as you can
 see by diffing `result-desktop.json` with `result-android.json`.
 
+# Current diff
+
+Here is the current diff between outputs:
+
+```patch
+--- result-desktop.json 2022-07-31 18:08:35.931448506 -0700
++++ result-android.json 2022-07-31 18:12:17.015507233 -0700
+@@ -3173,7 +3173,6 @@
+        "class method:Vector4#floor() {",
+        "class method:Object#function viewport(viewport) {",
+        "class method:Vector4#equals(v) {",
+-       "class method:Vector4#copy(v) {",
+        "class method:WebGLRenderer#function (scene, camera) {",
+        "block inside class method:Scene#updateMatrixWorld(force) {",
+        "class method:Scene#updateMatrix() {",
+@@ -3846,11 +3845,6 @@
+        "class method:SingleUniform#constructor(id, activeInfo, addr) {",
+        "class method:Window#function getSingularSetter(type) {",
+        "block inside class method:Window#function addUniform(container, uniformObject) {",
+-       "block inside class method:Window#function parseUniform(activeInfo, addr, container) {",
+-       "block inside class method:Window#while (true) {",
+-       "class method:SingleUniform#constructor(id, activeInfo, addr) {",
+-       "class method:Window#function getSingularSetter(type) {",
+-       "block inside class method:Window#function addUniform(container, uniformObject) {",
+        "class method:WebGLProgram#function () {",
+        "class method:Object#function useProgram(program) {",
+        "class method:WebGLUniforms#setValue(gl, name, value, textures) {",
+@@ -3862,7 +3856,6 @@
+        "block inside class method:Object#function refreshMaterialUniforms(uniforms, material, pixelRatio, height, transmissionRenderTarget) {",
+        "block inside class method:Window#function refreshUniformsCommon(uniforms, material) {",
+        "class method:Object#function get(object) {",
+-       "class method:SingleUniform#function setValueV1f(gl, v) {",
+        "class method:WebGLUniforms#setValue(gl, name, value, textures) {",
+        "class method:SingleUniform#function setValueM4(gl, v) {",
+        "class method:Window#function arraysEqual(a, b) {",
+```
+
+I'll keep this updated as I improve the instrumentation.
+
 # Further improvement
 
 We can further improve this by using an AST instead of naive regexes. Ideally we
