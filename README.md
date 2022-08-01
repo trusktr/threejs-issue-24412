@@ -23,8 +23,8 @@ JSON.stringify(window.executionResult, null, 2)
 This outputs a JSON array of strings representing all the functions, and some
 blocks within those functions, that were called during execution.
 
-I have saved the desktop and android execution results in `result-desktop.json`
-and `result-android.json`, respectively.
+I outputted this JSON twice, once on desktop in `result-desktop.json`, and once
+on Android in `result-android.json`.
 
 The desktop app executes 7 more locations than the mobile app does, as you can
 see by diffing `result-desktop.json` with `result-android.json`.
